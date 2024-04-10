@@ -1,0 +1,68 @@
+   ul.Menu {
+		font-size: 0px; /* Sin espacio entre opciones */
+   }
+	ul.Menu li{ /* Establece tamaño letra */
+		font-size:  x-large;
+	}
+
+	/*Estilo de las listas del menu y submenues*/
+	ul.Menu, ul.Menu li ul {
+		padding:0;
+		list-style: none;
+	}
+
+	/* Ancho del menu y del submenu */
+	ul.Menu li a, ul.Menu li ul{
+		width: 7em;
+	}
+	
+	/* Opciones (y sus bloques)  horizontalmente*/
+	ul.Menu li{
+		display: inline-block;
+		vertical-align:top;
+	}
+
+	/*MENU NORMAL*/
+	ul.Menu li a {
+		width: 5em;
+		color: orange;
+		font-weight: bold;
+		font-family: "Bradley Hand ITC";
+		font-size:  x-large;
+		text-decoration: none;
+		display: block;
+	}
+
+	/*MENU SELECCIONADO*/
+	ul.Menu li a:hover{
+		color:white;
+	}
+	
+	/* OCULTA SUBMENU por default */
+	ul.Menu li ul {
+		position: absolute;
+		background-color: #c8d9ed;
+		display: none;
+	}
+	
+	/*MUESTRA SUBMENU cuando el mouse esta encima del menu*/
+	ul.Menu li:hover ul{
+		display: block;
+	}
+
+	/*SUBMENU NORMAL*/
+	ul.Menu li:hover ul li a{
+		color: black;
+		padding: 2px 16px 2px 10px;
+	}
+
+	/*SUMBENU SELECCIONADO*/
+	ul.Menu li:hover ul li a:hover{
+		color: white;
+	}
+
+	
+	
+	
+	
+	

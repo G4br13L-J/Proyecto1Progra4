@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h1>PRODUCTOS</h1>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+        </tr>
+        <tr th:each="producto : ${productos}">
+            <td th:text="${producto.nombre}"></td>
+            <td th:text="${producto.descripcion}"></td>
+            <td th:text="${producto.precio}"></td>
+            <td>
+                <!-- Para eliminar un producto -->
+                <!-- /presentation/productos/eliminar/{id} -->
+                <a th:href="@{/presentation/productos/eliminar/{id}(id=${producto.id})}">Eliminar</a>
+            </td>
+            <td>
+                <form th:action="@{/presentation/productos/editar/{id}(id=${producto.id})}" method="post">
+                    <label for="nombreEdit">Nombre:</label>
+                    <input type="text" id="nombreEdit" name="nombre" th:value="${producto.nombre}" required>
+                    <br>
+                    <label for="descripcionEdit">Descripción:</label>
+                    <input type="text" id="descripcionEdit" name="descripcion" th:value="${producto.descripcion}"
+                        required>
+                    <br>
+                    <label for="precioEdit">Precio:</label>
+                    <input type="number" id="precioEdit" name="precio" th:value="${producto.precio}" step="0.01"
+                        required>
+                    <br>
+                    <input type="submit" value="Editar Producto">
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Formulario para agregar nuevo producto -->
+    <h2>Agregar Producto</h2>
+    <form th:action="@{/presentation/productos/agregar}" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" name="descripcion" required>
+        <br>
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.01" required>
+        <br>
+        <input type="submit" value="Agregar Producto">
+    </form>
+</body>
+
+</html>

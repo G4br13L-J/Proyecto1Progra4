@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>CLIENTES</h1>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+        </tr>
+        <tr th:each="cliente : ${clientes}">
+            <td th:text="${cliente.nombre}"></td>
+            <td th:text="${cliente.email}"></td>
+            <td>
+<!--                para eliminarlo-->
+<!--                /presentation/clientes/eliminar/{id}-->
+                <a th:href="@{/presentation/clientes/eliminar/{id}(id=${cliente.id})}">Eliminar</a>
+            </td>
+            <td>
+                <form th:action="@{/presentation/clientes/editar/{id}(id=${cliente.id})}" method="post">
+                    <label for="nombreEdit">Nombre:</label>
+                    <input type="text" id="nombreEdit" name="nombre" th:value="${cliente.nombre}" required>
+                    <br>
+                    <label for="emailEdit">Correo:</label>
+                    <input type="email" id="emailEdit" name="email" th:value="${cliente.email}" required>
+                    <br>
+                    <input type="submit" value="Editar Cliente">
+                </form>
+            </td>
+
+        </tr>
+    </table>
+
+    <!-- Formulario para agregar nuevo cliente -->
+    <h2>Agregar Cliente</h2>
+    <form th:action="@{/presentation/clientes/agregar}" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label for="email">Correo:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <input type="submit" value="Agregar Cliente">
+    </form>
+</body>
+</html>

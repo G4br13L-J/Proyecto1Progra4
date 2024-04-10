@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Historial de Facturas</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID Factura</th>
+        <th>Fecha</th>
+        <th>Total</th>
+        <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Aquí se mostrarán las filas de las facturas -->
+    <!-- Utiliza Thymeleaf para iterar sobre la lista de facturas y mostrar los datos -->
+    <tr th:each="factura : ${facturas}">
+        <td th:text="${factura.id}"></td>
+        <td th:text="${factura.fecha}"></td>
+        <td th:text="${factura.total}"></td>
+        <td>
+            <!-- Agrega un botón para eliminar cada factura -->
+            <form th:action="@{/presentation/facturas/eliminar/{id}(id=${factura.id})}" method="get">
+                <button type="submit">Eliminar</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

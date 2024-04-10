@@ -1,0 +1,46 @@
+.header {
+    background-color: palegreen;
+    display: flex;
+}
+
+.title {
+    font-family: "Imprint MT Shadow";
+    font-weight: bold;
+    color: darkmagenta;
+    font-size: xx-large;
+}
+
+.container {
+    width: 40%;
+    border-radius: 10px;
+    background-color: #c8d9ed;
+}
+
+.login-title {
+    font-family: "Lucida Handwriting";
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.email-label {
+    align-self: center;
+}
+
+.email-text {
+
+}
+
+.password-label {
+    align-self: center;
+}
+
+.password-text {
+
+}
+
+.body {
+
+}
