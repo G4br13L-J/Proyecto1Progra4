@@ -9,15 +9,20 @@
 <body>
     <div class="header">
         <div>
-            <div class="title"> Facturacion Electronica </div>&nbsp <div class="img"> <img class="logo" src="/images/fact.png"/></div>
+            <div class="title"> Facturacion Electronica </div>&nbsp <div> <img class="logo" src="/images/fact.png"/></div>
         </div>
         <div>
             <ul class="Menu">
                 <li>
-                    <a href="acercaDe.html"> Acerca de... </a>
+                    <a href="/presentation/acercaDe"> ->Acerca de... </a>
                 </li>
+                <br>
                 <li>
-                    <a href="/presentation/login"> login </a>
+                    <a th:href="@{/presentation/login}"> ->login </a>
+                </li>
+                <br>
+                <li>
+                    <a th:href="@{/presentation/register}"> ->Sign up </a>
                 </li>
             </ul>
         </div>

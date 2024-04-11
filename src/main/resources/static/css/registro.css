@@ -1,0 +1,28 @@
+.container {
+    width: 40%;
+    border-radius: 10px;
+    background-color: #c8d9ed;
+    text-align: center; /* Esto centrará el contenido del contenedor */
+    padding: 20px;
+    margin: 30px auto 0;
+}
+
+.email-label {
+    align-self: center;
+}
+
+.email-text {
+    align-self: center;
+}
+
+.password-label {
+    align-self: center;
+    margin-top: 5px;
+    justify-content: left;
+}
+
+.password-text {
+    align-self: center;
+    margin-top: 5px;
+    justify-content: right;
+}

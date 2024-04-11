@@ -6,14 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro</title>
+    <link rel="stylesheet" href="/css/registro.css">
 </head>
 <body>
-    <h1>Registro</h1>
-    <form method="POST" action="/presentation/register/registrar">
+    <h1 style="text-align: center">Registro</h1>
+    <form class="container" method="POST" action="/presentation/register/registrar">
         <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" required>
+        <input type="text" name="nombre" id="nombre" required> <br>
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
+        <input type="email" name="email" id="email" required> <br>
         <label for="password">Password</label>
         <input type="password" name="contrasena" id="password" required>
         <button type="submit">Registrar</button>
