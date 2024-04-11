@@ -1,6 +1,12 @@
 .header {
-    background-color: palegreen;
+    background-color: cadetblue;
+    font-weight: bold;
+    padding: 5px;
+    font-size:  x-large;
+    margin-bottom: 5px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .title {
@@ -14,6 +20,9 @@
     width: 40%;
     border-radius: 10px;
     background-color: #c8d9ed;
+    text-align: center; /* Esto centrará el contenido del contenedor */
+    padding: 20px;
+    margin: 30px auto 0;
 }
 
 .login-title {
@@ -30,17 +39,39 @@
 }
 
 .email-text {
-
+    align-self: center;
 }
 
 .password-label {
     align-self: center;
+    margin-top: 5px;
+    justify-content: left;
 }
 
 .password-text {
-
+    align-self: center;
+    margin-top: 5px;
+    justify-content: right;
 }
 
 .body {
+}
 
+.btn {
+    align-self: center;
+    margin-top: 5px;
+}
+
+.logo {
+
+}
+
+.header-elements {
+
+}
+
+.img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
