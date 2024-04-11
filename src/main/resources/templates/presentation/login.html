@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>Facturacion electronica</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../static/css/login.css">
-    <link rel="stylesheet" href="../../static/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <link rel="stylesheet" type="text/css" href="/css/menu.css">
 <body>
     <div class="header">
         <div>
-            <div class="title"> Facturacion Electronica </div>&nbsp <div> <img class="logo" src="../../static/images/fact.png"/></div>
+            <div class="title"> Facturacion Electronica </div>&nbsp <div class="img"> <img class="logo" src="/images/fact.png"/></div>
         </div>
         <div>
             <ul class="Menu">
@@ -25,11 +25,11 @@
     <div class="body">
         <form class="container" id="loggear" method="POST" name="login" action="/presentation/login/loggear">
             <div class="login-title"> Login </div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
-            <label for="password">Password</label>
-            <input type="password" name="contrasena" id="password" required>
-            <button type="submit">Login</button>
+            <label class="email-label" for="email">Email</label>
+            <input class="email-text" type="email" name="email" id="email" required> <br>
+            <label class="password-label" for="password">Password</label>
+            <input class="password-text" type="password" name="contrasena" id="password" required> <br>
+            <button class="btn" type="submit">Login</button>
         </form>
     </div>
 </body>
